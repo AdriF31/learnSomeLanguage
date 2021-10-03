@@ -5,8 +5,7 @@ void main() {
   double lon1 = 108.38572013887911;
   double lat2 = -6.792192617230363;
   double lon2 = 108.38616691317361;
-  double haversine = GreatCircleDistance.haversine(
-      lat1, lon1, lat2, lon2);
+  double haversine = GreatCircleDistance.haversine(lat1, lon1, lat2, lon2);
 
   print("jarak haversine = ${haversine} km");
 
@@ -20,7 +19,7 @@ class GreatCircleDistance {
     return degrees * pi / 180;
   }
 
-
+//perhitungan dengan haversine formula
   static double haversine(lat1, lon1, lat2, lon2) {
     var earthRadiusKm = 6371;
 
@@ -37,6 +36,7 @@ class GreatCircleDistance {
     return distance;
   }
 
+//perhitungan dengan spherical law of cosines
   static double Sloc(lat1, lon1, lat2, lon2) {
     var earthRadiusKm = 6371;
 
